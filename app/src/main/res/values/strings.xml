@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OnBoarding</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="advantage">Advantage</string>
+    <string name="some_description">Some description</string>
+    <string name="next">Next</string>
+</resources>
