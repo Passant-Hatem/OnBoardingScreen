@@ -44,17 +44,23 @@ class ViewPagerFragment : Fragment() {
 
         binding.nextButton.setOnClickListener{
             binding.ViewPager2.currentItem += 1
+            if(binding.ViewPager2.currentItem == 2)
+                finishBoarding()
         }
 
         binding.skipTxt.setOnClickListener{
-            findNavController().navigate(R.id.action_viewPagerFragment_to_homeFragment)
-            onBoardingFinished()
+            finishBoarding()
         }
 
         binding.wormDotsIndicator.attachTo(binding.ViewPager2)
 
         return binding.root
 
+    }
+
+    private fun finishBoarding(){
+        findNavController().navigate(R.id.action_viewPagerFragment_to_homeFragment)
+        onBoardingFinished()
     }
 
     private fun onBoardingFinished() {
