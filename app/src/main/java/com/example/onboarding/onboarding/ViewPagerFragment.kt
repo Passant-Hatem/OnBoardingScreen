@@ -43,9 +43,9 @@ class ViewPagerFragment : Fragment() {
         binding.ViewPager2.adapter = adapter
 
         binding.nextButton.setOnClickListener{
-            binding.ViewPager2.currentItem += 1
             if(binding.ViewPager2.currentItem == 2)
                 finishBoarding()
+            binding.ViewPager2.currentItem += 1
         }
 
         binding.skipTxt.setOnClickListener{
