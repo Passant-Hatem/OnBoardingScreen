@@ -9,9 +9,8 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.onboarding.R
 import com.example.onboarding.databinding.FragmentViewPagerBinding
-import com.example.onboarding.onboarding.screen.FirstFragment
-import com.example.onboarding.onboarding.screen.SecFragment
-import com.example.onboarding.onboarding.screen.ThirdFragment
+import com.example.onboarding.onboarding.screen.BaseFragment
+import com.example.onboarding.util.Screen
 
 class ViewPagerFragment : Fragment() {
 
@@ -29,9 +28,9 @@ class ViewPagerFragment : Fragment() {
         )
 
         val fragmentList = arrayListOf(
-            FirstFragment(),
-            SecFragment(),
-            ThirdFragment()
+            BaseFragment(Screen.First),
+            BaseFragment(Screen.Second),
+            BaseFragment(Screen.Third)
         )
 
         val adapter = ViewPagerAdapter(
